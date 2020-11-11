@@ -4,7 +4,8 @@ Zum setup:
 
 - git installieren
 - Ordner erstellen
-- dann git im Ordner initieren
+
+git im Ordner initieren:
 
 ```bash
 git init
@@ -25,4 +26,4 @@ Zum updaten des Repos:
 git add .
 git commit -m "[commit-message]"
 git push origin master
-```
+``` 
