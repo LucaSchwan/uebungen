@@ -11,14 +11,14 @@ Ziel:
 - Benutzer nach Zielbetrag fragen (double)
 - Mithilfe geeigneter Schleife Zeit (in Jahren) berechnen die es braucht den Zielbetrag zu erreichen
 - Ausgabe in Form von: "Es dauert 2 Jahre bei einem Zinssatz von 5%, um von 100 auf den Betrag 110 zu sparen. Nach dieser Reit hat man 110.25"
--"Es dauert [jahre] Jahre bei einem Zinssatz von [zinsen]%, um von [startbetrag] auf den Betrag [zielbetrag] zu sparen. Nach dieser Zeit hat man [finalbetrag]."
+-"Es dauert [jahre] Jahre bei einem Zinssatz von [zinsen]%, um von [startBetrag] auf den Betrag [zielBetrag] zu sparen. Nach dieser Zeit hat man [finalBetrag]."
 
 Zeit:
 
 - Benutzer nach Anzahl von Jahren fragen (int)
 - Mit geeigneter Schleife berechnen wie viel in dieser Zeit gespart wurde
 - Ausgabe in Form von: "Bei einem Zinssatz von 5% und einem Startbetrag von 100 hat man nach 2 Jahren 110.25 gespart."
-- "Bei einem Zinssatz von [zinsen]% und einem Startbetrag von [startbetrag] hat man nach [jahre] Jahren [finalbetrag] gespart."
+- "Bei einem Zinssatz von [zinsen]% und einem Startbetrag von [startBetrag] hat man nach [jahre] Jahren [finalBetrag] gespart."
 
 Beispiellauf des Programmes:
 
@@ -30,7 +30,8 @@ Bitte geben Sie den Zinssatz als Prozentwert ein.
 Bitte waehlen Sie aus:
 Ziel: Berechnet die Zeit, bis ein gegebener Betrag angespart wurde.
 Zeit: Berechnet den Betrag, der nach einer gegebenen Zeit angespart 
-wurde. Ziel
+wurde. 
+Ziel
 Bitte geben Sie den Zielbetrag ein.
 110
 Es dauert 2 Jahre bei einem Zinssatz von 5%, um von 100 auf den Betrag 110 zu sparen. Nach dieser Zeit hat man 110.25.
@@ -39,18 +40,21 @@ Es dauert 2 Jahre bei einem Zinssatz von 5%, um von 100 auf den Betrag 110 zu sp
 Todo:
 
 - [ ] Variablen deklarieren
-  - [ ] startbetrag (double)
-  - [ ] zinsen (double)
-  - [ ] zielbetrag (double)
-  - [ ] finalbetrag (double)
+  - [x] startBetrag (double)
+  - [x] zinsen (double)
+  - [x] wahl (String)
+  - [x] zielBetrag (double)
+  - [x] finalBetrag (double)
   - [ ] jahre (int)
-  - [ ] wahl (String)
-- [ ] 'UI' schreiben
-  - [ ] Nach Startbetrag fragen
-  - [ ] Nach Zinsen fragen
-  - [ ] Ziel oder Zeit wählen
+
+- [x] 'UI' schreiben
+  - [x] Nach Startbetrag fragen
+  - [x] Nach Zinsen fragen
+  - [x] Ziel oder Zeit wählen
+
 - [ ] Ziel-Funktion schreiben
-  - [ ] while-loop mit zinsberechnung bis finalbetrag über zielbetrag
+  - [x] while-loop mit zinsberechnung bis finalbetrag über zielbetrag
+
 - [ ] Zeit-Funktion schreiben
   - [ ] for-loop mit jahren als end bedingung
 
