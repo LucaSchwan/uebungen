@@ -38,20 +38,20 @@ Es dauert 2 Jahre bei einem Zinssatz von 5%, um von 100 auf den Betrag 110 zu sp
 
 Todo:
 
--[ ] Variablen deklarieren
-  -[ ] startbetrag (double)
-  -[ ] zinsen (double)
-  -[ ] zielbetrag (double)
-  -[ ] finalbetrag (double)
-  -[ ] jahre (int)
-  -[ ] wahl (String)
--[ ] 'UI' schreiben
-  -[ ] Nach Startbetrag fragen
-  -[ ] Nach Zinsen fragen
-  -[ ] Ziel oder Zeit wählen
--[ ] Ziel-Funktion schreiben
-  -[ ] while-loop mit zinsberechnung bis finalbetrag über zielbetrag
--[ ] Zeit-Funktion schreiben
-  -[ ] for-loop mit jahren als end bedingung
+- [ ] Variablen deklarieren
+  - [ ] startbetrag (double)
+  - [ ] zinsen (double)
+  - [ ] zielbetrag (double)
+  - [ ] finalbetrag (double)
+  - [ ] jahre (int)
+  - [ ] wahl (String)
+- [ ] 'UI' schreiben
+  - [ ] Nach Startbetrag fragen
+  - [ ] Nach Zinsen fragen
+  - [ ] Ziel oder Zeit wählen
+- [ ] Ziel-Funktion schreiben
+  - [ ] while-loop mit zinsberechnung bis finalbetrag über zielbetrag
+- [ ] Zeit-Funktion schreiben
+  - [ ] for-loop mit jahren als end bedingung
 
 
