@@ -39,13 +39,13 @@ Es dauert 2 Jahre bei einem Zinssatz von 5%, um von 100 auf den Betrag 110 zu sp
 
 Todo:
 
-- [ ] Variablen deklarieren
+- [x] Variablen deklarieren
   - [x] startBetrag (double)
   - [x] zinsen (double)
   - [x] wahl (String)
   - [x] zielBetrag (double)
   - [x] finalBetrag (double)
-  - [ ] jahre (int)
+  - [x] jahre (int)
 
 - [x] 'UI' schreiben
   - [x] Nach Startbetrag fragen
