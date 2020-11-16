@@ -1,9 +1,14 @@
 public class ZinsesZins_Rechner {
   
   public static void main(String []args) {
-    double startBetrag = SimpleIO.getDouble("Bitte geben Sie den Startbetrag ein.");
-    double zinsen = SimpleIO.getDouble("Bitte geben Sie den Zinssatz als Prozentwert ein.") / 100; //divided by 100 to get percentage
 
+	double startBetrag = SimpleIO.getDouble("Bitte geben Sie den Startbetrag ein.");
+	
+	double zinsen = 0;
+	while(zinsen==0) {
+	zinsen = SimpleIO.getDouble("Bitte geben Sie den Zinssatz als Prozentwert ein.") / 100; //divided by 100 to get percentage
+	}
+    
     String wahl = SimpleIO.getString("Bitte waehlen Sie aus: \n Ziel: \n Berechnet die Zeit, bis ein gegebener Betrag angespart wurde. \n Zeit: \n Berechnet den Betrag, der nach einer gegebenen Zeit angespart wurde.");
 
     switch(wahl) {
@@ -15,15 +20,34 @@ public class ZinsesZins_Rechner {
 
   static void zielRechnung(double startBetrag, double zinsen) {
     double zielBetrag = SimpleIO.getDouble("Bitte geben Sie den Zielbetrag ein.");
-    double finalBetrag = startBetrag;
-    int jahre = 0;
+    
+    if(startBetrag<zielBetrag&&zinsen>0) {
+    	  double finalBetrag = startBetrag;
+    	    int jahre = 0;
 
-    while(finalBetrag < zielBetrag) {
-      finalBetrag += (finalBetrag *= zinsen);
-      jahre++;
+    	    while(finalBetrag < zielBetrag) {
+    	      finalBetrag += (finalBetrag *= zinsen);
+    	      jahre++;
+    	    }
+
+    	    SimpleIO.output("Es dauert " + jahre + " Jahre bei einem Zinssatz von " + zinsen * 100 + "%, um von " + startBetrag + " auf den Betrag " + zielBetrag + " zu sparen. \n  Nach dieser Zeit hat man " + finalBetrag +  ".", "Ergenbis");
     }
+    else {
+    	 if(startBetrag>zielBetrag&&zinsen<0) {
+    	  	  double finalBetrag = startBetrag;
+    	  	    int jahre = 0;
 
-    SimpleIO.output("Es dauert " + jahre + " Jahre bei einem Zinssatz von " + zinsen * 100 + "%, um von " + startBetrag + " auf den Betrag " + zielBetrag + " zu sparen. \n  Nach dieser Zeit hat man " + finalBetrag +  ".", "Ergenbis");
+    	  	    while(finalBetrag < zielBetrag) {
+    	  	      finalBetrag += (finalBetrag *= zinsen);
+    	  	      jahre++;
+    	  	    }
+
+    	  	    SimpleIO.output("Es dauert " + jahre + " Jahre bei einem Zinssatz von " + zinsen * 100 + "%, um von " + startBetrag + " auf den Betrag " + zielBetrag + " zu sparen. \n  Nach dieser Zeit hat man " + finalBetrag +  ".", "Ergenbis");
+    	  }
+    	  else {
+    	  	SimpleIO.output("Der Zielbetrag kann nicht erreicht werden.", "error-403 forbidden");
+    	  }
+    }   
   }
 
   static void zeitRechnung(double startBetrag, double zinsen) {
