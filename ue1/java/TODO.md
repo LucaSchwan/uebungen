@@ -52,10 +52,10 @@ Todo:
   - [x] Nach Zinsen fragen
   - [x] Ziel oder Zeit wählen
 
-- [ ] Ziel-Funktion schreiben
+- [x] Ziel-Funktion schreiben
   - [x] while-loop mit zinsberechnung bis finalbetrag über zielbetrag
 
-- [ ] Zeit-Funktion schreiben
-  - [ ] for-loop mit jahren als end bedingung
+- [x] Zeit-Funktion schreiben
+  - [x] for-loop mit jahren als end bedingung
 
 
