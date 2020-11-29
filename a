@@ -1,0 +1,84 @@
+[33mcommit 587dd51d54a4e07bc945470d6d58eeaad555f141[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Partero1 <74548973+Partero1@users.noreply.github.com>
+Date:   Wed Nov 25 12:26:16 2020 +0100
+
+    Test
+
+[33mcommit 437f4fe82aae7b5b5be56cd17403f8b5e28f2b85[m
+Merge: 9078495 24f8391
+Author: Partero1 <74548973+Partero1@users.noreply.github.com>
+Date:   Tue Nov 24 19:07:40 2020 +0100
+
+    Merge branch 'master' of https://github.com/LucaSchwan/uebungen
+
+[33mcommit 9078495076bbfdec9f5f9cf9566b671cd64c5b4b[m
+Author: Partero1 <74548973+Partero1@users.noreply.github.com>
+Date:   Tue Nov 24 19:06:28 2020 +0100
+
+    ue2
+
+[33mcommit 24f83917c75db19b7b5c883818ae1dece7084568[m
+Author: Luca Schwan <schwan.luc@gmail.com>
+Date:   Mon Nov 16 15:28:08 2020 +0100
+
+    Updated TODO.md
+
+[33mcommit d79759b7f45fd786c4435f8f9d98fd71c7d5f1c6[m
+Author: Partero1 <74548973+Partero1@users.noreply.github.com>
+Date:   Mon Nov 16 15:18:50 2020 +0100
+
+    Update README.md
+
+[33mcommit 390426a2719b394125712724fc2863a70e94b652[m
+Author: Luca Schwan <schwan.luc@gmail.com>
+Date:   Mon Nov 16 14:59:14 2020 +0100
+
+    refactorised ZinsesZinsenRechner
+
+[33mcommit e7c7c24584aae3c3b3c71fcedc0697fa6e7cba6d[m
+Author: Luca Schwan <schwan.luc@gmail.com>
+Date:   Mon Nov 16 10:39:42 2020 +0100
+
+    updated TODO.md
+
+[33mcommit 7b12108d0952b3ddebadaf5330806e55cc765ae0[m
+Author: Luca Schwan <schwan.luc@gmail.com>
+Date:   Sun Nov 15 22:39:07 2020 +0100
+
+    v1 program for ue1
+
+[33mcommit b7dd9171c863d6a37fdcd2bc68cc475edb002699[m
+Author: Luca Schwan <schwan.luc@gmail.com>
+Date:   Sun Nov 15 20:53:58 2020 +0100
+
+    correction to TODO.md
+
+[33mcommit d877d0270c70fe3f0025d64cfb035ffc19c16f80[m
+Author: Luca Schwan <schwan.luc@gmail.com>
+Date:   Sun Nov 15 20:52:22 2020 +0100
+
+    added TODO.md to ue1
+
+[33mcommit 949df52b172b6a05240bda2e05782271fd8938a5[m
+Author: Luca Schwan <schwan.luc@gmail.com>
+Date:   Wed Nov 11 20:54:40 2020 +0100
+
+    updated README.md
+
+[33mcommit 67301f807af8b99b7120d4da0d8b8b9590df8181[m
+Author: Luca Schwan <schwan.luc@gmail.com>
+Date:   Wed Nov 11 20:52:24 2020 +0100
+
+    updated README.md
+
+[33mcommit 8bd79ecf790a5b14c554e834ab07b71fbaaf2cbf[m
+Author: Luca Schwan <schwan.luc@gmail.com>
+Date:   Wed Nov 11 20:50:18 2020 +0100
+
+    added README.md and deleted test.txt
+
+[33mcommit a00bd50757933ab31b4c3dafa0215b75f40f4489[m
+Author: Luca Schwan <schwan.luc@gmail.com>
+Date:   Wed Nov 11 20:41:50 2020 +0100
+
+    test

@@ -1,4 +1,4 @@
-import java.awt.GraphicsEnvironment;
+aimport java.awt.GraphicsEnvironment;
 import java.util.Scanner;
 
 import javax.swing.JComboBox;
