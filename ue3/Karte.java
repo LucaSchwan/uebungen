@@ -3,10 +3,6 @@ public class Karte {
     public Wert wert;
 
 
-public static void main(String [] args){
-
-}
-
 public String toString(Karte karte){
     String ausgabe = "";
     String ausFarbe = farbe.toString();
