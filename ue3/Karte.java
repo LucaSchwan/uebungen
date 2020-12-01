@@ -97,4 +97,19 @@ public class Karte {
         return false;
     }
 
+    public static void druckeEinbahnBedienungen(){
+        Karte [] deck = skatblatt();
+        int decklaenge = deck.length;
+        for(int i = 0; i < decklaenge; i++){
+            for(int j = 0; j < decklaenge; j++){
+                if(deck[i].bedient(deck[j])){
+                    if(!deck[j].bedient(deck[i])){
+                        System.out.println(deck[j] + " bedient " + deck[i] + ", aber " + deck[i] + " nicht " + deck[j]);
+                    }
+                }
+            }
+        }
+        int e = 0;
+    }
+    
 }
