@@ -69,4 +69,32 @@ public class Karte {
         return deck;
     }
 
+
+    public boolean bedient(Karte other){
+        if(this.wert == other.wert){
+            return true;
+        }
+        else {
+            if(this.farbe == other.farbe){
+                return true;
+            }
+            else{
+                if(other.wert == Wert.BUBE){
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    public boolean bedienbar(Karte... karten){
+        for(int i = 0; i<=karten.length; i++){
+            if(bedient(karten[i])){
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
