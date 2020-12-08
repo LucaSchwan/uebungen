@@ -1,3 +1,14 @@
+/**
+ * Klasse zum erzeugen von SeasonalCalendars. Ein SeasonalCalendar wird verwendet um eine Tabelle in Form von einem String zu bekommen.
+ * Die Tabelle zeigt in welchen Monaten die uebertragenden Produkte Regional oder aus dem Import verfügbar sind.
+ * 
+ * @author Luca Schwan, Robert Joel
+ * @version 1.0
+ * @since 08-12-2020
+ * 
+*/
+
+
 public class SeasonalCalendar {
     Product[] product;
 

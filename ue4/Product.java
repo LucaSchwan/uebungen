@@ -1,3 +1,13 @@
+/**
+ * Das Objekt Produkt beinhaltet Name so wie Verfügbarkeit eines Produktes.
+ * Die Verfügbarkeit ist vom Monat abhänig und per boolean Array oder String anzugeben. 
+ * 
+ * @author Luca Schwan, Robert Joel
+ * @version 1.0
+ * @since 08-12-2020
+ * 
+*/
+
 class Product {
 	private String name;
 	private boolean[] regionalAvailability = new boolean[12];

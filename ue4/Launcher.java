@@ -1,3 +1,12 @@
+/**
+ * Klasse zum arbeiten mit Produkten, sowie SeasonalCalendars. 
+ * 
+ * @author Luca Schwan, Robert Joel
+ * @version 1.0
+ * @since 08-12-2020
+ * 
+*/
+
 public class Launcher {
     
     public static void main(String[] args){

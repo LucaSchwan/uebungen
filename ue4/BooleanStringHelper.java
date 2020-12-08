@@ -1,3 +1,12 @@
+/**
+ * Klasse zum erzeugen und Ausgeben von Produkten, sowie SeasonalCalendars. 
+ * 
+ * @author Luca Schwan, Robert Joel
+ * @version 1.0
+ * @since 08-12-2020
+ *  
+*/
+
 public class BooleanStringHelper {
 	public static boolean [] parse(String s, char c) {
 		boolean b[];
