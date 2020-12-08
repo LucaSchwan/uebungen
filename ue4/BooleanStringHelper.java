@@ -1,5 +1,5 @@
 /**
- * Klasse zum erzeugen und Ausgeben von Produkten, sowie SeasonalCalendars. 
+ * Klasse zum erzeugen von boolesn Arrays und zum konvertieren dieser in einen String.
  * 
  * @author Luca Schwan, Robert Joel
  * @version 1.0
