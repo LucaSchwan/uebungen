@@ -2,7 +2,7 @@ public class BooleanStringHelper {
 	public static boolean [] parse(String s, char c) {
 		boolean b[];
 	        b = new boolean[s.length()];
-		System.out.println(b);
+		//System.out.println(b);
 		for(int i = 0; i < s.length(); i++) {
 			if(s.charAt(i) == c) {
 				b[i] = true;
