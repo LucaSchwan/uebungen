@@ -40,7 +40,16 @@ public class Tree {
    * @param x einzufuegende Zahl
    */
   public void insert(int x) {
-   //TODO
+   if(this.simpleSearch(x)){
+   }
+   else{
+     if(this.root == null){
+      this.root = new TreeNode(x);
+     }
+     else{
+      this.root.insert(x); 
+     }
+   }
   }
   /**
    * Sucht x, ohne den Baum zu veraendern.
@@ -48,7 +57,12 @@ public class Tree {
    * @return true, falls x im Baum enthalten ist, sonst false
    */
   public boolean simpleSearch(int x) {
-   //TODO
+   if(this.isEmpty()){
+      return false;
+   }
+   else{
+    return root.simpleSearch(x);
+   }
   }
   /**
    * Sucht x und rotiert den Knoten, bei dem die Suche nach x endet, in die Wurzel.
@@ -62,7 +76,12 @@ public class Tree {
    * @return Sortierte Ausgabe aller Elemente.
    */
   public String toString() {
-    //TODO
+    if(this.root == null){
+      return "This Tree is empty.";
+    }
+    else{
+      return "tree [" + this.root.toString() + "]";
+    }
   }
   /**
    * Wandelt den Baum in einen Graphen im dot Format um.

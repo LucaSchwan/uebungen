@@ -94,7 +94,22 @@ public class TreeNode {
    * @return true, falls x enthalten ist, sonst false
    */
   public boolean simpleSearch(int x) {
-    //TODO
+    if(this.value == x){
+      return true;
+    }
+    else{
+      if(this.left == null&&this.right == null){
+        return false;
+      }
+      else{
+        if(this.left.value > x){
+         return this.left.simpleSearch(x);
+        }
+        else{
+         return this.right.simpleSearch(x);
+        }
+      }
+    }
   }
 
   /**
@@ -102,7 +117,22 @@ public class TreeNode {
    * @param x der einzufuegende Wert
    */
   public void insert(int x) {
-   //TODO
+   if(x < this.value){
+      if(this.left == null){
+        this.left = new TreeNode(x);
+      }
+      else{
+        this.left.insert(x);
+      }
+   }
+   else{
+    if(this.right == null){
+      this.right = new TreeNode(x);
+    }
+    else{
+      this.right.insert(x);
+    }
+   }
   }
 
   /**
@@ -119,7 +149,7 @@ public class TreeNode {
    * @return Geordnete Liste aller Zahlen, die in diesem Teilbaum gespeichert sind.
    */
   public String toString() {
-    //TODO
+    
   }
  
   /**
