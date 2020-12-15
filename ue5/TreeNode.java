@@ -152,25 +152,27 @@ public class TreeNode {
    */
   public TreeNode rotationSearch(int x) {
     if(this.hasLeft()){
-      if(this.getLeft().getValue() == x){
-        TreeNode t1 = this.getRight();
+      if(this.getLeft().value == x){
+        TreeNode ergebniss = this.getLeft();
+        TreeNode t2 = this.getLeft();
         this.left = this.getLeft().getRight();
-        t1.right = this;
-        return t1;
+        t2.right = this;
+        return ergebniss;
       }
       else{
-        this.getLeft().rotationSearch(x);
+        return this.getLeft().rotationSearch(x);
       }
     }
     if(this.hasRight()){
-      if(this.getRight().getValue() == x){
-        TreeNode t1 = this.getLeft();
-        this.right = this.getRight().getLeft();
-        t1.left = this;
-        return t1;
+      if(this.getRight().value == x){
+          TreeNode ergebniss = this.getRight();
+          TreeNode t3 = this.getRight();
+          this.right = this.getRight().getLeft();
+          t3.left = this;     
+          return ergebniss;
       }
       else{
-        this.getRight().rotationSearch(x);
+        return this.getRight().rotationSearch(x);
       }
     }
     
