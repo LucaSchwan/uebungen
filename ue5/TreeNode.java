@@ -94,7 +94,7 @@ public class TreeNode {
    * @return true, falls x enthalten ist, sonst false
    */
   public boolean simpleSearch(int x) {
-    if(this.value == x){
+    if(this.getValue() == x){
       return true;
     }
     else{
@@ -102,14 +102,19 @@ public class TreeNode {
         return false;
       }
       else{
-        if(this.left.value > x){
-         return this.left.simpleSearch(x);
+        if(this.left != null){
+          if(this.left.getValue() >= x){
+            this.left.simpleSearch(x);
+          }
         }
-        else{
-         return this.right.simpleSearch(x);
+        if(this.right != null){
+          if(this.right.getValue() <= x){
+            this.right.simpleSearch(x);
+          }
         }
       }
     }
+    return false;
   }
 
   /**
@@ -117,7 +122,10 @@ public class TreeNode {
    * @param x der einzufuegende Wert
    */
   public void insert(int x) {
-   if(x < this.value){
+   if(this.getValue() == x){
+   }
+   else{
+    if(x < this.value){
       if(this.left == null){
         this.left = new TreeNode(x);
       }
@@ -134,6 +142,7 @@ public class TreeNode {
     }
    }
   }
+  }
 
   /**
    * Sucht in diesem Teilbaum nach x und rotiert den Endpunkt der Suche in die
@@ -141,17 +150,35 @@ public class TreeNode {
    * @param x der gesuchte Wert
    * @return die neue Wurzel des Teilbaums
    */
-  public TreeNode rotationSearch(int x) {
+  //public TreeNode rotationSearch(int x) {
    //TODO
-  }
+ // }
 
   /**
    * @return Geordnete Liste aller Zahlen, die in diesem Teilbaum gespeichert sind.
    */
-  public String toString() {
-    
-  }
+   public String toString() {
+    StringBuilder strg = new StringBuilder();
+    return this.toString(strg);
+   }
  
+   public String toString(StringBuilder strg) {
+    if(this.hasRight()||this.hasLeft()){
+      if(this.hasLeft()){
+        left.toString(strg);
+      }
+      strg.append(this.getValueString() + ", ");
+      if(this.hasRight()){
+        right.toString(strg);
+      }
+    }
+    else{
+      strg.append(this.getValueString()+ ", ");
+    }
+
+    return strg.toString();
+  }
+
   /**
    * Erzeugt eine dot Repraesentation in str
    * @param str Stringbuilder Objekt zur Konstruktion der Ausgabe
