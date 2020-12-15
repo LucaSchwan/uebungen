@@ -66,9 +66,20 @@ public class Tree {
    * @param x der gesuchte Wert
    * @return true, falls x im Baum enthalten ist, sonst false
    */
-   // public boolean search(int x) {
- 	//TODO
-  //  }
+    public boolean search(int x) {
+      if(this.root.getValue() == x){
+        return true;
+      }
+      else{
+        TreeNode t1 = this.root.rotationSearch(x);
+        if(t1.getValue() == x){
+          return true;
+        }
+        else{
+          return false;
+        }
+      }
+    }
   /**
    * @return Sortierte Ausgabe aller Elemente.
    */
@@ -149,9 +160,9 @@ public class Tree {
     System.out.println("Aufgabe c): geordnete String-Ausgabe");
     System.out.println(myTree.toString());
     System.out.println("Aufgabe d): Suchen nach vorhandenen Elementen mit Rotation.");
-  //  myTree.search(3);
-  //  myTree.search(23);
-  //  myTree.search(15);
+    myTree.search(3);
+    myTree.search(23);
+    myTree.search(15);
     if (args.length > 1) {
       if (myTree.writeToFile(args[1])) {
         System.out.println("Baum nach Suchen von 15, 3 und 23 als DOT File ausgegeben in Datei "

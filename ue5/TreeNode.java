@@ -150,9 +150,33 @@ public class TreeNode {
    * @param x der gesuchte Wert
    * @return die neue Wurzel des Teilbaums
    */
-  //public TreeNode rotationSearch(int x) {
-   //TODO
- // }
+  public TreeNode rotationSearch(int x) {
+    if(this.hasLeft()){
+      if(this.getLeft().getValue() == x){
+        TreeNode t1 = this.getRight();
+        this.left = this.getLeft().getRight();
+        t1.right = this;
+        return t1;
+      }
+      else{
+        this.getLeft().rotationSearch(x);
+      }
+    }
+    if(this.hasRight()){
+      if(this.getRight().getValue() == x){
+        TreeNode t1 = this.getLeft();
+        this.right = this.getRight().getLeft();
+        t1.left = this;
+        return t1;
+      }
+      else{
+        this.getRight().rotationSearch(x);
+      }
+    }
+    
+
+   return this;
+  }
 
   /**
    * @return Geordnete Liste aller Zahlen, die in diesem Teilbaum gespeichert sind.
