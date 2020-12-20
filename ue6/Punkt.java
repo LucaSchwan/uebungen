@@ -26,7 +26,7 @@ public final class Punkt{
         BigDecimal y = other.yStelle.subtract(this.yStelle);
         BigDecimal sqr =x.pow(2).add(y.pow(2));
     
-        return sqr;
+        return BigDecimalUtility.sqrt(sqr);
     }
 
 }
