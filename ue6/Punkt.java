@@ -29,4 +29,15 @@ public final class Punkt{
         return BigDecimalUtility.sqrt(sqr);
     }
 
+
+    public boolean equals(Object obj){  
+        if((obj instanceof Punkt)){
+            Punkt pObj = (Punkt) obj;
+            if(BigDecimalUtility.equalValues(this.xStelle, pObj.xStelle)&&BigDecimalUtility.equalValues(this.yStelle, pObj.yStelle)){
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
