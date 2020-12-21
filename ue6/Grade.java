@@ -89,7 +89,7 @@ public final class Grade {
         }
     }
 
-    public booleanenthaelt(Punkt p0){
+    public boolean enthaelt(Punkt p0){
         if(zwischenp1p2(p0)||vorp1(p0)||hinterp2(p0)){
             return true;
         }
@@ -98,4 +98,14 @@ public final class Grade {
         }
     }
 
+
+    public boolean equals(Object obj){
+        if(obj.getClass().equals(this.getClass())){
+            Grade g1 = (Grade) obj;
+            if(this.enthaelt(g1.p1)&&this.enthaelt(g1.p2)){
+                return true;
+            }
+        }
+        return false;
+    }
 }
