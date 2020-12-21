@@ -89,4 +89,13 @@ public final class Grade {
         }
     }
 
+    public booleanenthaelt(Punkt p0){
+        if(zwischenp1p2(p0)||vorp1(p0)||hinterp2(p0)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
 }
