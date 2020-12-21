@@ -43,7 +43,15 @@ public final class Grade {
             return true;
         }
         else{
-            
+            BigDecimal aStrecke = BigDecimalUtility.sqrt(p0.xStelle.subtract(p1.xStelle).pow(2).add(p0.yStelle.subtract(p1.yStelle).pow(2)));
+            BigDecimal bStrecke = BigDecimalUtility.sqrt(p0.xStelle.subtract(p2.xStelle).pow(2).add(p0.yStelle.subtract(p2.yStelle).pow(2)));
+            BigDecimal cStrecke = BigDecimalUtility.sqrt(p1.xStelle.subtract(p2.xStelle).pow(2).add(p1.yStelle.subtract(p2.yStelle).pow(2)));
+            if(BigDecimalUtility.equalValues(aStrecke.add(bStrecke), cStrecke)){
+                return true;
+            }
+            else{
+                return false;
+            }
         }
     }
 
