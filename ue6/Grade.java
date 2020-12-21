@@ -38,7 +38,7 @@ public final class Grade {
         return "Gerade durch (" + p1.xStelle.toString() + "," +p1.yStelle.toString() + ") und (" +p2.xStelle.toString() + "," +p2.yStelle.toString() + ")";
     }
 
-    private boolean zwischenp1p2(Punkt p0){
+    protected boolean zwischenp1p2(Punkt p0){
         if(BigDecimalUtility.equalValues(p0.xStelle, p1.xStelle)&&BigDecimalUtility.equalValues(p0.yStelle, p1.yStelle)||BigDecimalUtility.equalValues(p0.xStelle, p2.xStelle)&&BigDecimalUtility.equalValues(p0.yStelle, p2.yStelle)){
             return true;
         }
@@ -55,12 +55,38 @@ public final class Grade {
         }
     }
 
-    private boolean vorp1(Punkt p0){
-
+    protected boolean vorp1(Punkt p0){
+        if(BigDecimalUtility.equalValues(p0.xStelle, p1.xStelle)&&BigDecimalUtility.equalValues(p0.yStelle, p1.yStelle)||BigDecimalUtility.equalValues(p0.xStelle, p2.xStelle)&&BigDecimalUtility.equalValues(p0.yStelle, p2.yStelle)){
+            return false;
+        }
+        else{
+            BigDecimal aStrecke = BigDecimalUtility.sqrt(p0.xStelle.subtract(p1.xStelle).pow(2).add(p0.yStelle.subtract(p1.yStelle).pow(2)));
+            BigDecimal bStrecke = BigDecimalUtility.sqrt(p0.xStelle.subtract(p2.xStelle).pow(2).add(p0.yStelle.subtract(p2.yStelle).pow(2)));
+            BigDecimal cStrecke = BigDecimalUtility.sqrt(p1.xStelle.subtract(p2.xStelle).pow(2).add(p1.yStelle.subtract(p2.yStelle).pow(2)));
+            if(BigDecimalUtility.equalValues(aStrecke.add(cStrecke), bStrecke)){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
     }
 
-    private boolean hinterp2(Punkt p0){
-
+    protected boolean hinterp2(Punkt p0){
+        if(BigDecimalUtility.equalValues(p0.xStelle, p1.xStelle)&&BigDecimalUtility.equalValues(p0.yStelle, p1.yStelle)||BigDecimalUtility.equalValues(p0.xStelle, p2.xStelle)&&BigDecimalUtility.equalValues(p0.yStelle, p2.yStelle)){
+            return false;
+        }
+        else{
+            BigDecimal aStrecke = BigDecimalUtility.sqrt(p0.xStelle.subtract(p1.xStelle).pow(2).add(p0.yStelle.subtract(p1.yStelle).pow(2)));
+            BigDecimal bStrecke = BigDecimalUtility.sqrt(p0.xStelle.subtract(p2.xStelle).pow(2).add(p0.yStelle.subtract(p2.yStelle).pow(2)));
+            BigDecimal cStrecke = BigDecimalUtility.sqrt(p1.xStelle.subtract(p2.xStelle).pow(2).add(p1.yStelle.subtract(p2.yStelle).pow(2)));
+            if(BigDecimalUtility.equalValues(bStrecke.add(cStrecke), aStrecke)){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
     }
 
 }
