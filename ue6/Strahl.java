@@ -1,13 +1,14 @@
 public class Strahl extends Grade {
-    Punkt p1;
-    Punkt p2;
     final boolean p1Start;
 
     public Strahl(Punkt p0, Punkt p){
         super(p0, p);
-        p1 = super.p1;
-        p2 = super.p2;
         p1Start = true;
+    }
+
+    public Strahl(Punkt p0, Punkt p, boolean richtung){
+        super(p0, p);
+        p1Start = richtung;
     }
 
     public boolean startsFromp1(){
@@ -23,5 +24,38 @@ public class Strahl extends Grade {
             return "Strahl durch (" + p1.xStelle.toString() + "," +p1.yStelle.toString() + ") und (" +p2.xStelle.toString() + "," +p2.yStelle.toString() + "). Startpunkt ist Punkt 1";
         }
         return "Strahl durch (" + p1.xStelle.toString() + "," +p1.yStelle.toString() + ") und (" +p2.xStelle.toString() + "," +p2.yStelle.toString() + "). Startpunkt ist Punkt 2";
+    }
+
+    public Grade verlaengern(){
+        return new Grade(p1,p2);
+    }
+
+    public boolean enthaelt(Punkt p0){
+        if(p1Start){
+            if(zwischenp1p2(p0)||hinterp2(p0)){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        else{
+            if(zwischenp1p2(p0)||vorp1(p0)){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+    }
+
+    public boolean equals(Object obj){
+        if(super.equals(obj)){
+            Strahl strahl = (Strahl) obj;
+            if(p1Start == strahl.p1Start){
+                return true;
+            }
+        }
+        return false;
     }
 }

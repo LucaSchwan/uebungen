@@ -100,12 +100,12 @@ public class Grade {
 
 
     public boolean equals(Object obj){
-        if(obj.getClass().equals(this.getClass())){
+       // if(obj.getClass().equals(this.getClass())){
             Grade g1 = (Grade) obj;
             if(this.enthaelt(g1.p1)&&this.enthaelt(g1.p2)){
                 return true;
             }
-        }
+       // }
         return false;
     }
 }
