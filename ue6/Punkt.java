@@ -18,7 +18,7 @@ public final class Punkt{
     }
     
     public String toString(){
-    return "(" + xStelle.toString() + "," + yStelle.toString();
+    return "(" + xStelle.toString() + "," + yStelle.toString() + ")";
     }
 
     public BigDecimal abstand(Punkt other){

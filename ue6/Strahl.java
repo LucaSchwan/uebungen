@@ -21,9 +21,9 @@ public class Strahl extends Grade {
 
     public String toString(){
         if(p1Start){
-            return "Strahl durch (" + p1.xStelle.toString() + "," +p1.yStelle.toString() + ") und (" +p2.xStelle.toString() + "," +p2.yStelle.toString() + "). Startpunkt ist Punkt 1";
+            return "Strahl von (" + p1.xStelle.toString() + "," +p1.yStelle.toString() + ") durch (" +p2.xStelle.toString() + "," +p2.yStelle.toString() + ")";
         }
-        return "Strahl durch (" + p1.xStelle.toString() + "," +p1.yStelle.toString() + ") und (" +p2.xStelle.toString() + "," +p2.yStelle.toString() + "). Startpunkt ist Punkt 2";
+        return "Strahl durch (" + p1.xStelle.toString() + "," +p1.yStelle.toString() + ") von (" +p2.xStelle.toString() + "," +p2.yStelle.toString() + ")";
     }
 
     public Grade verlaengern(){

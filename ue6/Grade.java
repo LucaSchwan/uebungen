@@ -6,7 +6,7 @@ public class Grade {
     public final Punkt p2;
 
     public Grade(Punkt übergabe1, Punkt übergabe2){
-        if(!BigDecimalUtility.equalValues(übergabe1.xStelle, übergabe2.xStelle)&&!BigDecimalUtility.equalValues(übergabe1.yStelle, übergabe2.yStelle)){
+        if(!(BigDecimalUtility.equalValues(übergabe1.xStelle, übergabe2.xStelle)&&BigDecimalUtility.equalValues(übergabe1.yStelle, übergabe2.yStelle))){
             if(BigDecimalUtility.equalValues(übergabe1.xStelle, übergabe2.xStelle)){
                 if(übergabe1.yStelle.compareTo(übergabe2.yStelle) < 0 ){
                     p1 = übergabe1;
