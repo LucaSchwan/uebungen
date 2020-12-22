@@ -1,6 +1,6 @@
 import java.math.BigDecimal;
 
-public final class Grade {
+public class Grade {
     
     public final Punkt p1;    
     public final Punkt p2;
