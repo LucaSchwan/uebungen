@@ -3,7 +3,7 @@ public class MutableMap<K,V> extends AbstractReadableMap<K,V> implements Writabl
     @Override
     public void put(K nKey, V nValue){
         for(int i = 0; i<entries.length; i++){
-            if(entries[i].key.equals(nKey)||entries[i].key.equals(null)){
+            if((entries[i] == null)||entries[i].key.equals(nKey)){
                 entries[i] = new Entry(nKey,nValue);
                 return;
             }

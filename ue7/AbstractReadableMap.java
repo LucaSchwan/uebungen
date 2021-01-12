@@ -30,7 +30,7 @@ public abstract class AbstractReadableMap<K,V> implements ReadableMap<K,V> {
       HashSet hash = new HashSet();
 
       for(int i = 0; i<entries.length;i++){
-        if(!entries[i].key.equals(null)){
+        if(!(entries[i] == null)){
             hash.add(entries[i].key);
         }
       }
