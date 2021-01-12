@@ -1,3 +1,6 @@
+import java.util.Set;
+import java.util.HashSet;
+
 public abstract class AbstractReadableMap<K,V> implements ReadableMap<K,V> {
     protected Entry<K,V>[] entries;
 
@@ -21,5 +24,17 @@ public abstract class AbstractReadableMap<K,V> implements ReadableMap<K,V> {
 
     public ImmutableMap<K,V> asImmutableMap(){
         return new ImmutableMap(entries);
+    }
+
+    public Set<K> keysAsSet(){
+      HashSet hash = new HashSet();
+
+      for(int i = 0; i<entries.length;i++){
+        if(!entries[i].key.equals(null)){
+            hash.add(entries[i].key);
+        }
+      }
+
+      return hash;
     }
 }
