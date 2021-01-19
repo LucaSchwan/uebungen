@@ -7,10 +7,12 @@ dimensions :: [[Int]] -> (Int, Int)
 dimensions matrix = if isMatrix matrix then (numCol matrix, numRows matrix) else (-1, -1)
 
 numRows :: [[Int]] -> Int
-numRows matrix = length matrix
+numRows = length
 
 numCol :: [[Int]] -> Int
 numCol matrix = length (matrix !! 0)
 
--- isQuadratic :: [[Int]] -> Bool
--- isQuadratic matrix = if isMatrix matrix then if length matrix == length (matrix !! 1) then True
+isQuadratic :: [[Int]] -> Bool
+isQuadratic matrix = if isMatrix matrix then
+                       if length matrix == length (matrix !! 1) then True else False
+                     else False
