@@ -4,7 +4,8 @@ isMatrix [_] = True
 isMatrix (e1 : e2 : matrix) = length e1 == length e2 && isMatrix (e2 : matrix)
 
 dimensions :: [[Int]] -> (Int, Int)
-dimensions matrix = if isMatrix matrix then (numRows matrix, numCol matrix)
+dimensions matrix = if isMatrix matrix then
+                      (numRows matrix, numCol matrix)
                     else (-1, -1)
 
 numRows :: [[Int]] -> Int
@@ -21,19 +22,34 @@ isQuadratic matrix = if isMatrix matrix then
 
 getRow :: [[Int]] -> Int -> [Int]
 getRow [] _ = []
-getRow (e : matrix) i = if isMatrix matrix then (e !! i) : (getRow matrix i)
+getRow (e : matrix) i = if isMatrix matrix then
+                          (e !! i) : (getRow matrix i)
                         else [] 
 
 getCol :: [[Int]] -> Int -> [Int]
-getCol matrix i = if isMatrix matrix then matrix !! i
+getCol matrix i = if isMatrix matrix then
+                    matrix !! i
                   else []
 
 setEntry :: [[Int]] -> Int -> Int -> Int -> [[Int]]
 setEntry (e : matrix) i j aij = if j > 1 then
                                         e : (setEntry matrix i (j - 1) aij)
-                                      else (iterateRows e i aij) : matrix 
+                                      else (insertIntoRow e i aij) : matrix
   
-iterateRows :: [Int] -> Int -> Int -> [Int]
-iterateRows (a : e) i aij = if i > 1 then
-                              a : iterateRows e (i - 1) aij
+insertIntoRow :: [Int] -> Int -> Int -> [Int]
+insertIntoRow (a : e) i aij = if i > 1 then
+                              a : insertIntoRow e (i - 1) aij
                             else aij : e
+
+travMatrix :: [[Int]] -> [[Int]]
+travMatrix [[]] = []
+travMatrix [[], _] = []
+travMatrix matrix = (front matrix) : (travMatrix (back matrix))
+
+front :: [[Int]] -> [Int]
+front [] = []
+front ((y : x) : matrix) = y : (front matrix)
+
+back :: [[Int]] -> [[Int]]
+back [] = []
+back ((y : x) : matrix) = x : (back matrix) 
