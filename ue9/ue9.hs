@@ -1,3 +1,5 @@
-mapOptional::(a ->b) -> Maybe a-> Maybe b
-mapOptional x Nothing  = Nothing
+data Optional a = Empty | Present
+
+mapOptional::(a ->b) -> Optional a-> Optional b
+mapOptional x Empty = Empty
 
