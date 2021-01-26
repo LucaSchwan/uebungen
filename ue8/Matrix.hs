@@ -48,11 +48,8 @@ travMatrix matrix = (front matrix) : (travMatrix (back matrix))
 
 front :: [[Int]] -> [Int]
 front [] = []
-front [[]] = []
 front ((y : x) : matrix) = y : (front matrix)
-
 
 back :: [[Int]] -> [[Int]]
 back [] = []
-back [[]] = []
 back ((y : x) : matrix) = x : (back matrix) 
