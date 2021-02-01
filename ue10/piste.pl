@@ -34,3 +34,7 @@ erreichbar(X,Y) :- endetIn(X,Z), erreichbar(Z,Y).
 
 moeglicheSchlusspiste(X,S):- erreichbar(X,S), endetIn(S,tal).
 
+treffpisten(X,Y,T):- erreichbar(X,T), erreichbar(Y,T), T\=(tal).
+
+anfaengerGeeignet(X):- blau(X), endetIn(X, tal).
+anfaengerGeeignet(X):- blau(X), endetIn(X, Y), anfaengerGeeignet(Y).
