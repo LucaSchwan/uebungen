@@ -26,10 +26,11 @@ endetIn(isskogel, tal).
 %b) endetIn(X,wiesenalm).
 
 %Kontrolliert ob Pisten am gleichen Punkt starten
-gleicherStartpunkt(sonnalm, teufeltal) :-gleicherStartpunkt(teufeltal, sonnalm).
-gleicherStartpunkt(vorkogel, arbiskoge).
-gleicherStartpunkt(arbiskoge, vorkogel).
+gleicherStartpunkt(X,Y):- start(X), start(Y).
+gleicherStartpunkt(X,Y):- endetIn(Z,X), endetIn(Z,Y).
 
-%Weg ins Tal über Y
+erreichbar(X,Y) :- endetIn(X,Y).
+erreichbar(X,Y) :- endetIn(X,Z), erreichbar(Z,Y).
 
+moeglicheSchlusspiste(X,S):- erreichbar(X,S), endetIn(S,tal).
 
