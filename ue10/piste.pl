@@ -25,8 +25,11 @@ endetIn(isskogel, tal).
 
 %b) endetIn(X,wiesenalm).
 
-%Kontrolliert ob Pisten am sleben Punkt starten
-gleicherStartpunkt(sonnalm, teufeltal).
-gleicherStartpunkt(teufeltal, sonnalm).
+%Kontrolliert ob Pisten am gleichen Punkt starten
+gleicherStartpunkt(sonnalm, teufeltal) :-gleicherStartpunkt(teufeltal, sonnalm).
 gleicherStartpunkt(vorkogel, arbiskoge).
 gleicherStartpunkt(arbiskoge, vorkogel).
+
+%Weg ins Tal über Y
+
+
