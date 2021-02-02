@@ -1,3 +1,4 @@
+-- aus vo
 from :: Int-> [Int]
 from x = x : from(x+1)
 
@@ -10,6 +11,7 @@ dropall (x : xs) = x : dropall (drop_mult x xs)
 primes :: [Int]
 primes = dropall (from 2)
 
+-- neu
 goodPrimes :: [Int]
 goodPrimes = good primes
   where
