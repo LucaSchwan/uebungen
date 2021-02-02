@@ -70,3 +70,6 @@ tour(cons(Y,YS),cons(X,XS)):- Y==tal,X==tal, tourZiel(cons(Y,YS)),tourZiel(cons(
 
 tourGleich(cons(tal,nil), cons(tal, _)).
 tourGleich(cons(X,XS),cons(X,YS)):- tourGleich(XS,YS).
+
+convert(cons(X,nil),[Y]):- X==Y.
+convert(cons(X,XS),[Y,YS]):- X==Y, convert(XS,[YS]).
