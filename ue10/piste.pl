@@ -55,17 +55,18 @@ pathOfLength(cons(_,Y),s(Z)):- pathOfLength(Y,Z).
 
 tourOfLength(cons(X,YS),L):- X==tal, pathOfLength(cons(X,YS),L), tourZiel(cons(X,YS)), tourZusammen(cons(X,YS)).
 
-tourZiel(cons(_,YS)):- YS==tal.
+tourZiel(cons(tal, nil)).
 tourZiel(cons(_,YS)):- tourZiel(YS).
 
 tourZusammen(cons(X,cons(Y,YS))):- endetIn(X,Y), tourZusammen(cons(Y,YS)).
 tourZusammen(cons(tal,nil)).
 tourZusammen(cons(tal,cons(Y,YS))):- start(Y), tourZusammen(cons(Y,YS)).
 
-partTour(P,P).
-partTour(P,T):- partVorne(P,T).
-partTour(P,T):- partHinten(P,T).
+partTour(P,P):- tour(P,P).
+partTour(cons(tal, XS), cons(tal,YS)):- tourGleich(XS,YS).
+partTour(cons(X, XS), cons(_,YS)):- partTour(cons(X,XS), YS).
 
-partVorne(P,T):-
+tour(cons(Y,YS),cons(X,XS)):- Y==tal,X==tal, tourZiel(cons(Y,YS)),tourZiel(cons(X,XS)),tourZusammen(cons(Y,YS)),tourZusammen(cons(X,XS)).
 
-partHinten(P,T):-
+tourGleich(cons(tal,nil), cons(tal, _)).
+tourGleich(cons(X,XS),cons(X,YS)):- tourGleich(XS,YS).
